@@ -43,7 +43,11 @@ public class Dropdown extends Hooks {
         this.Obj = new dropdownObjects(driver);
     }
 
-		
+	@Given("User is on Dropdown page")
+	public void user_is_on_DropdownPage() throws MalformedURLException {
+		setUp();
+	}
+	
 	// Interact with dropdown
     @When("^I select India from the dropdown$")
     public void i_select_from_the_dropdown() {
