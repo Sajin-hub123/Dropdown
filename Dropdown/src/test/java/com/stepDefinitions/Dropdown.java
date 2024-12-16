@@ -45,7 +45,7 @@ public class Dropdown extends Hooks {
 
 		
 	// Interact with dropdown
-    @When("^I select \"India\" from the dropdown$")
+    @When("^I select India from the dropdown$")
     public void i_select_from_the_dropdown() {
         
         WebElement dropdownOption = driver.findElement(Obj.India);
@@ -53,14 +53,14 @@ public class Dropdown extends Hooks {
         Allure.addAttachment("Dropdown Option Selected","India");
     }
 
-    @Then("^\"India\" should be selected$")
+    @Then("^India should be selected$")
     public void should_be_selected(String option) {
     	WebElement selectedOption = driver.findElement(By.xpath("//select[@text='" + option + "']"));
         Assert.assertTrue(selectedOption.isDisplayed()); 
     }
 
        // Perform drag-and-drop
-    @When("^I drag the item from \"Source Image\" to \"Trash\"$")
+    @When("^I drag the item from Source Image to Trash$")
     public void i_drag_the_item_from_to() {
     	WebElement dragandDrop = driver.findElement(Obj.dragandDrop);
         dragandDrop.click(); 

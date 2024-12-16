@@ -1,11 +1,10 @@
-Feature: Calculator UI Test
+Feature: Dropdown and DragAndDrop
 
-  Scenario: User performs summing operation
-    Given User is on calculator home screen
-    When User clicks on seven
-    And User clicks on plus
-    And User clicks on four
-    And User clicks on equals
-    Then User should see result
+  Scenario: User selects Dropdown and Drag and Drop
+    Given User is on Dropdown page
+    When I select India from the dropdown
+    Then India should be selected
+    When I drag the item from Source Image to Trash
+    Then the item should be dropped successfully
     
     
